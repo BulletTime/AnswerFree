@@ -1,0 +1,27 @@
+{
+  "name": "题自由",
+  "description": "自动答题插件",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "extension",
+    "extension"
+  ],
+  "host_permissions": [
+    "https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"
+  ],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js","popup.js","xlsx.full.min.js","background.js","popup.css"],
+    "run_at": "document_idle"
+  }]
+}

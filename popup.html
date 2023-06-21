@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div>
+  <div class="block">
+    <span>
+      <input type="checkbox" id="enableSwitch" checked=true>
+      <label for="enableSwitch"></label>
+    </span>
+    <span>
+      <input type="checkbox" id="modeSwitch" checked=true>
+      <label for="modeSwitch"></label>
+    </span>
+  </div>
+  <div class="block">
+    <div>
+      <input type="file" id="fileInput" accept=".xlsx, .xls" style="display: none;">
+      <button id="chooseFileButton">选择题库</button>
+    </div>
+    <div id="filename" class="block"></div>
+  </div>
+  <div class="block">
+    <button id="start">开始答题</button>
+  </div>
+</div>
+
+  
+  
+
+</body>
+  <script src="xlsx.full.min.js"></script>
+  <script src="popup.js"></script>
+</html>
